@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+/* primero hacer la parte mobil
+ajustar en cada media luego por size
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo > img {
+  width: 50px;
+}
+
+header{
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+
+.menu {
+  display:none;
+}
+
+.product{
+  display:flex;
+  flex-direction:column;
+  border:2px solid gray;
+  align-items:center;
+  text-align:center;
+}
+
+.hamburger{
+  display:flex;
+  color:white;
+  background-color:gray;
+  justify-content:flex-end;
+  margin:4px;
+}
+
+.social{
+  display:flex;
+  justify-content:space-around;
+  list-style-type: none;
+}
+
+
+
+/*tablet screen*/
+@media screen and (min-width: 768px) {
+  
+  body {
+   /* background: rgba(0,0,255,.2);*/
+  }
+  header{
+  display:flex;
+  flex-flow:wrap;
+  justify-content: space-evenly;
+}
+  .product{
+    
+  display:flex;
+  flex-direction:column;
+  border:2px solid gray;
+  border-color: #ECECEC;
+  text-align:justify;
+}
+    
+}
+
+/* big screen */
+@media screen and (min-width: 1025px) {
+  
+  body {
+   /* background: green;*/
+  }
+  .menu{
+  display:flex;
+  list-style-type: none;
+  flex-flow:row wrap;
+  justify-content:flex-end;
+   background:gray;
+   /*padding:10px;*/ 
+  }
+  .menu > li{
+    margin:10px;
+    color:white;
+  }
+  .hamburger{
+    display:none;
+  }
+
+  main{
+    display:flex;
+  /*  justify-content:space-evenly;*/
+
+  }
+  .product{
+    flex-flow:column wrap;
+    margin:10px;
+  }
+}
